@@ -1,0 +1,17 @@
+{
+  "name": "native-queue-consumer",
+  "version": "0.0.1-alpha",
+  "description": "Example a java-tron's native queue (ØMQ) subscriber",
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc --build",
+    "test": "ENVIRONMENT=TEST NODE_OPTIONS=--experimental-worker nyc mocha --timeout 60000 -r ts-node/register tests/**/*.spec.ts --exit",
+    "lint": "tslint -p tsconfig.json './{src,tests}/**/*.ts'"
+  },
+  "author": "Vinicius Niche Correa (viniciusnichecorrea@gmail.com)",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^12.6.3",
+    "zeromq": "^5.1.0"
+  }
+}
